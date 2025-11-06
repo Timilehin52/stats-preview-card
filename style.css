@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+:root {
+  --Navy950-main-background: hsl(233, 47%, 7%);
+  --Blue950-card-background: hsl(244, 37%, 16%);
+  --Purple500-accent: hsl(277, 64%, 61%);
+  --White-main-headingstats: hsl(0, 0%, 100%);
+  --White-main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --White-stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--Navy950-main-background);
+  max-width: 1440px;
+}
+.container {
+  width: 1000px;
+  color: var(--White-main-headingstats);
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+.minicontainer {
+  width: 50%;
+  height: 440px;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Blue950-card-background);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+h1 {
+  letter-spacing: 1px;
+  margin-right: 39px;
+}
+span {
+  color: var(--Purple500-accent);
+}
+p {
+  color: var(--White-main-paragraph);
+  letter-spacing: 1px;
+}
+.r1 {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.r2 {
+  display: flex;
+  gap: 60px;
+}
+
+.microcontainer {
+  position: relative;
+  display: inline-block;
+  margin-top: 12px;
+}
+.microcontainer img {
+  display: block;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 100%;
+  height: 440px;
+}
+.microcontainer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: hsl(277, 64%, 61%, 0.9);
+  mix-blend-mode: multiply;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 375px;
+
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .minicontainer {
+    width: 100%;
+    height: 100%;
+    background-color: var(--Blue950-card-background);
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .r1 {
+    gap: 10px;
+  }
+  .r2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .microcontainer img {
+    width: 100%;
+    height: auto;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    position: relative;
+  }
+}
